@@ -1,24 +1,11 @@
 //Prototypes
-function Pessoa(nome, idade) {
+function Pessoa(nome, idade, peso) {
     this.nome = nome;
     this.idade = idade;
-    this.peso = 80;
+    this.peso = peso;
 }
 
-const paulo = new Pessoa('Paulo', 34);
-console.log(Pessoa.prototype)
+const paulo = new Pessoa('Paulo', 34, 70);
+//console.log(Pessoa.prototype)
+const pessoa = 'Paulo'
 
-const notbook = {
-    cor: 'preta',
-    ano: '2022',
-    especifications: function(value) {
-        return `Este notbook custa R$ ${value},00; cor ${this.cor}; ano ${this.ano}`
-    }
-}
-
-const dell = {
-    marca:'Dell'
-}
-
-Object.setPrototypeOf(dell, notbook)
-console.log(dell.especifications(5000))
